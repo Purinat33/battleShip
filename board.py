@@ -60,20 +60,23 @@ class board:
         self.destroyerPOS = [-1, -1]        
     
     
-    def initialize():
+    def initialize(isBot):
         # For start of the game where we place stuff
-        pass
+        if isBot:
+            # Populate board in its way
+            pass
     
     
     # We attack the enemy (No damage checking)
     def attack():
-        
         attackPlan = 1
         return attackPlan
     
     
     # The enemy attack us (we check via attack plan)
     def defense(attackPlan):
+        # Check stuff from last turn like
+        # Enemy attack POS
         pass
         
     # 10x10 playable area
