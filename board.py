@@ -25,6 +25,7 @@
 # Empty == numbers
 
 class board:
+    
 
     def __init__(self):
         # Our area
@@ -37,24 +38,43 @@ class board:
         
         # Shippings
         # Must be consecutives number of cells vertically or horizontally (eg. Cruiser 5 in a rows) no diagonally
+        # There might be better logic to do this but *Later*
         self.carrier = ['A', 'A', 'A', 'A', 'A']
         self.carrierHit = [False for i in range(5)]
+        self.carrierPOS = [-1 for i in range(5)]
         
         self.battleShip = ['B', 'B', 'B', 'B']
         self.battleShipHit = [False for i in range(4)]
+        self.battleShipPOS = [-1 for i in range(4)]
         
         self.cruiser = ['C', 'C', 'C']
         self.cruiserHit = [False for i in range(3)]
+        self.cruiserPOS = [-1 for i in range(3)]
         
         self.submarine = ['D', 'D', 'D']
         self.submarineHit = [False for i in range(3)]
+        self.submarinePOS = [-1 for i in range(3)]
         
         self.destroyer = ['E', 'E']
         self.destroyerHit = [False, False]
+        self.destroyerPOS = [-1, -1]        
+    
+    
+    def initialize():
+        # For start of the game where we place stuff
+        pass
+    
+    
+    # We attack the enemy (No damage checking)
+    def attack():
         
-        # Enemy placing random ships
-        
-        
+        attackPlan = 1
+        return attackPlan
+    
+    
+    # The enemy attack us (we check via attack plan)
+    def defense(attackPlan):
+        pass
         
     # 10x10 playable area
     
